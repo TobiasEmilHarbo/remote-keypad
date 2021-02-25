@@ -11,7 +11,7 @@ import { existsSync } from 'fs';
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/webapp/browser');
+  const distFolder = './../browser';//join(process.cwd(), 'dist/webapp/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
@@ -31,7 +31,7 @@ export function app() {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    // res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
 
   return server;
@@ -41,10 +41,10 @@ function run() {
   const port = process.env.PORT || 4000;
 
   // Start up the Node server
-  const server = app();
-  server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
-  });
+  // const server = app();
+  // server.listen(port, () => {
+  //   console.log(`Node Express server listening on http://localhost:${port}`);
+  // });
 }
 
 // Webpack will replace 'require' with '__webpack_require__'
@@ -58,3 +58,5 @@ if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
 }
 
 export * from './src/main.server';
+
+exports.app = app()

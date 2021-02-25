@@ -14,7 +14,7 @@ const settings = { timestampsInSnapshots: true }
 const adminFs = admin.firestore()
 adminFs.settings(settings)
 
-const app  = require(`${process.cwd()}/dist/server`).app;
+const app  = require(`${process.cwd()}/dist/webapp/server/main`).app;
 app.use(cors({ origin: true }))
 
 app.use(bodyParser.json())

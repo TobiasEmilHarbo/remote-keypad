@@ -1,0 +1,32 @@
+[debug] [2020-02-23T20:36:00.192Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T20:36:00.195Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\teh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-02-23T20:36:00.195Z] CLI Version:   7.13.1
+[debug] [2020-02-23T20:36:00.195Z] Platform:      win32
+[debug] [2020-02-23T20:36:00.195Z] Node Version:  v10.18.0
+[debug] [2020-02-23T20:36:00.197Z] Time:          Sun Feb 23 2020 21:36:00 GMT+0100 (GMT+01:00)
+[debug] [2020-02-23T20:36:00.197Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T20:36:00.197Z] 
+[debug] [2020-02-23T20:36:00.207Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-23T20:36:00.207Z] > authorizing via signed-in user
+[debug] [2020-02-23T20:36:00.208Z] [iam] checking project remote-keypad for permissions ["firebase.projects.get"]
+[debug] [2020-02-23T20:36:00.209Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/remote-keypad:testIamPermissions  
+
+[debug] [2020-02-23T20:36:01.228Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-23T20:36:01.229Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/remote-keypad  
+ 
+[debug] [2020-02-23T20:36:01.524Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\teh\dev\remote-keypad\webapp\functions" for Cloud Functions...
+[debug] [2020-02-23T20:36:03.579Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-23T20:36:03.579Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-23T20:36:03.579Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-23T20:36:03.579Z] [worker-~diagnostic~-031b27aa-f90b-4bed-ba11-810cd669e410]: Assigning socketPath: \\?\pipe\C:\Users\teh\dev\remote-keypad\webapp\functions\15948
+[debug] [2020-02-23T20:36:03.579Z] [worker-~diagnostic~-031b27aa-f90b-4bed-ba11-810cd669e410]: BUSY
+[debug] [2020-02-23T20:36:04.192Z] [runtime-status] [15948] Functions runtime initialized. {"cwd":"C:\\Users\\teh\\dev\\remote-keypad\\webapp\\functions","node_version":"10.18.0"}
+[debug] [2020-02-23T20:36:04.194Z] [runtime-status] [15948] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-23T20:36:04.201Z] [runtime-status] [15948] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"C:\\Users\\teh\\dev\\remote-keypad\\webapp\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-02-23T20:36:04.204Z] [runtime-status] [15948] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\teh\\dev\\remote-keypad\\webapp\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-02-23T20:36:04.205Z] [runtime-status] [15948] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\teh\\dev\\remote-keypad\\webapp\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[httpOnRequest]: http function initialized (http://localhost:5000/remote-keypad/us-central1/httpOnRequest).
+[debug] [2020-02-23T20:36:05.080Z] [worker-~diagnostic~-031b27aa-f90b-4bed-ba11-810cd669e410]: IDLE
